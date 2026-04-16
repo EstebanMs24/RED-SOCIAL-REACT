@@ -4,17 +4,17 @@ import { Routes, Route } from 'react-router-dom'
 // Importamos componentes de Layout
 import Navbar from './components/Navbar'
 import LeftColumn from './components/LeftColumn'
-import MiddleColumn from './components/MiddleColumn' // Este será nuestro "Home"
+import MiddleColumn from './components/MiddleColumn' 
 import RightColumn from './components/RightColumn'
 import Footer from './components/Footer'
 
 // Importamos las nuevas Páginas
-import Chat from './pages/Chat'
-import Configuracion from './pages/Configuracion'
-import Grupos from './pages/Grupos'
 import Login from './pages/Login'
-import Perfil from './pages/Perfil'
 import Registro from './pages/Registro'
+import Chat from './pages/Chat'
+import Grupos from './pages/Grupos'
+import Perfil from './pages/Perfil'
+import Configuracion from './pages/Configuracion'
 
 export default function App() {
   return (
@@ -28,7 +28,7 @@ export default function App() {
           {/* Columna Izquierda fija */}
           <LeftColumn />
 
-          {/* ÁREA DINÁMICA: Aquí es donde cambian las páginas */}
+          {/* ÁREA DINÁMICA: Aquí cambian los componentes según la URL */}
           <Routes>
             <Route path="/" element={<MiddleColumn />} />
             <Route path="/login" element={<Login />} />
@@ -50,3 +50,7 @@ export default function App() {
     </>
   )
 }
+
+
+
+// Este es el link http://localhost:5173/login.html para acceder a la pagina de login, pero no es necesario escribir el .html, con http://localhost:5173/login es suficiente. Lo mismo para las otras paginas, por ejemplo http://localhost:5173/registro para la pagina de registro. 
